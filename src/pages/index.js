@@ -1,51 +1,51 @@
-import { Testimonials } from '@/components/Testimonials'
-import { DarkMode } from '@/components/home/DarkMode'
-import { ConstraintBased } from '@/components/home/ConstraintBased'
-import { BuildAnything } from '@/components/home/BuildAnything'
-import { Performance } from '@/components/home/Performance'
-import { MobileFirst } from '@/components/home/MobileFirst'
-import { StateVariants } from '@/components/home/StateVariants'
-import { ComponentDriven } from '@/components/home/ComponentDriven'
-import { Customization } from '@/components/home/Customization'
-import { ModernFeatures } from '@/components/home/ModernFeatures'
-import { EditorTools } from '@/components/home/EditorTools'
-import { ReadyMadeComponents } from '@/components/home/ReadyMadeComponents'
-import { Search } from '@/components/Search'
-import { Hero } from '@/components/home/Hero'
-import { BigText, InlineCode, Link, Paragraph, Widont } from '@/components/home/common'
-import { useEffect, useState } from 'react'
-import { Logo } from '@/components/Logo'
-import { Footer } from '@/components/home/Footer'
-import NextLink from 'next/link'
-import Head from 'next/head'
+import { Testimonials } from '@/components/Testimonials';
+import { DarkMode } from '@/components/home/DarkMode';
+import { ConstraintBased } from '@/components/home/ConstraintBased';
+import { BuildAnything } from '@/components/home/BuildAnything';
+import { Performance } from '@/components/home/Performance';
+import { MobileFirst } from '@/components/home/MobileFirst';
+import { StateVariants } from '@/components/home/StateVariants';
+import { ComponentDriven } from '@/components/home/ComponentDriven';
+import { Customization } from '@/components/home/Customization';
+import { ModernFeatures } from '@/components/home/ModernFeatures';
+import { EditorTools } from '@/components/home/EditorTools';
+import { ReadyMadeComponents } from '@/components/home/ReadyMadeComponents';
+import { Search } from '@/components/Search';
+import { Hero } from '@/components/home/Hero';
+import { BigText, InlineCode, Link, Paragraph, Widont } from '@/components/home/common';
+import { useEffect, useState } from 'react';
+import { Logo } from '@/components/Logo';
+import { Footer } from '@/components/home/Footer';
+import NextLink from 'next/link';
+import Head from 'next/head';
 
 function NpmInstallButton() {
-  const [state, setState] = useState('idle')
+  const [state, setState] = useState('idle');
 
   useEffect(() => {
-    let current = true
+    let current = true;
     if (state === 'copying') {
       navigator.clipboard
         .writeText('npm install tailwindcss')
         .then(() => {
           if (current) {
-            setState('copied')
+            setState('copied');
           }
         })
         .catch(() => {
           if (current) {
-            setState('error')
+            setState('error');
           }
-        })
+        });
     } else if (state === 'copied' || state === 'error') {
       window.setTimeout(() => {
         if (current) {
-          setState('idle')
+          setState('idle');
         }
-      }, 2000)
+      }, 2000);
     }
-    return () => (current = false)
-  }, [state])
+    return () => (current = false);
+  }, [state]);
 
   return (
     <button
@@ -64,7 +64,7 @@ function NpmInstallButton() {
         <path d="M8 16c0 1.886 0 2.828.586 3.414C9.172 20 10.114 20 12 20h4c1.886 0 2.828 0 3.414-.586C20 18.828 20 17.886 20 16v-4c0-1.886 0-2.828-.586-3.414C18.828 8 17.886 8 16 8m-8 8h4c1.886 0 2.828 0 3.414-.586C16 14.828 16 13.886 16 12V8m-8 8c-1.886 0-2.828 0-3.414-.586C4 14.828 4 13.886 4 12V8c0-1.886 0-2.828.586-3.414C5.172 4 6.114 4 8 4h4c1.886 0 2.828 0 3.414.586C16 5.172 16 6.114 16 8" />
       </svg>
     </button>
-  )
+  );
 }
 
 export default function Home() {
@@ -74,24 +74,30 @@ export default function Home() {
         <meta
           key="twitter:title"
           name="twitter:title"
-          content="Tailwind CSS - Rapidly build modern websites without ever leaving your HTML."
+          content="AhaClub - Help find your life, instead of job"
         />
         <meta
           key="og:title"
           property="og:title"
-          content="Tailwind CSS - Rapidly build modern websites without ever leaving your HTML."
+          content="AhaClub - Help find your life, instead of job"
         />
-        <title>Tailwind CSS - Rapidly build modern websites without ever leaving your HTML.</title>
+        <title>AhaClub - Help find your life, instead of job</title>
       </Head>
       <header className="relative z-10 max-w-screen-lg xl:max-w-screen-xl mx-auto">
         <div className="px-4 sm:px-6 md:px-8 mb-14 sm:mb-20 xl:mb-8">
           <div className="border-b border-gray-200 py-4 flex items-center justify-between mb-16 sm:mb-20 -mx-4 px-4 sm:mx-0 sm:px-0">
             <Search />
-            <div className="flex items-center space-x-6 sm:space-x-10 ml-6 sm:ml-10">
+            <div className="flex items-center space-x-6 sm:space-x-10 ml-6 sm:ml-10 whitespace-nowrap">
               <NextLink href="/docs">
                 <a className="text-base leading-6 font-medium hover:text-gray-600 transition-colors duration-200 py-2">
-                  <span className="sm:hidden">Docs</span>
-                  <span className="hidden sm:inline">Documentation</span>
+                  <span className="sm:hidden">技術文件</span>
+                  <span className="hidden sm:inline">技術文件</span>
+                </a>
+              </NextLink>
+              <NextLink href="https://tailwindcss.com/">
+                <a className="text-base leading-6 font-medium hover:text-gray-600 transition-colors duration-200 py-2">
+                  <span className="sm:hidden">EN</span>
+                  <span className="hidden sm:inline">EN</span>
                 </a>
               </NextLink>
               <a
@@ -110,18 +116,18 @@ export default function Home() {
           </div>
           <Logo className="w-auto h-7 sm:h-8" />
           <h1 className="text-4xl sm:text-6xl lg:text-7xl leading-none font-extrabold tracking-tight text-gray-900 mt-10 mb-8 sm:mt-14 sm:mb-10">
-            Rapidly build modern websites without ever leaving your HTML.
+          AhaClub - Help find your life, instead of job
           </h1>
           <p className="max-w-screen-lg text-lg sm:text-2xl sm:leading-10 font-medium mb-10 sm:mb-11">
-            A utility-first CSS framework packed with classes like <InlineCode>flex</InlineCode>,{' '}
-            <InlineCode>pt-4</InlineCode>, <InlineCode>text-center</InlineCode> and{' '}
-            <InlineCode>rotate-90</InlineCode> that can be composed to build any design, directly in
-            your markup.
+            一個功能優先的 CSS 框架，集合了 <InlineCode>flex</InlineCode>,{' '}
+            <InlineCode>pt-4</InlineCode>, <InlineCode>text-center</InlineCode> 和{' '}
+            <InlineCode>rotate-90</InlineCode> 等 class 屬性，並將其組合起來建構出任意的設計。
           </p>
+          <div className="p-3">行动，不如</div>
           <div className="flex flex-wrap space-y-4 sm:space-y-0 sm:space-x-4 text-center">
             <NextLink href="/docs">
               <a className="w-full sm:w-auto flex-none bg-gray-900 hover:bg-gray-700 text-white text-lg leading-6 font-semibold py-3 px-6 border border-transparent rounded-xl focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-gray-900 focus:outline-none transition-colors duration-200">
-                Get started
+                马上行动
               </a>
             </NextLink>
             <NpmInstallButton />
@@ -132,12 +138,12 @@ export default function Home() {
       <section className="relative z-10 text-center max-w-screen-lg xl:max-w-screen-xl mx-auto">
         <div className="px-4 sm:px-6 md:px-8">
           <BigText as="h2" className="mb-8">
-            <Widont>“Best practices” don’t actually work.</Widont>
+            <Widont>事实上，「简单聊聊」是沒用的。</Widont>
           </BigText>
           <figure>
             <blockquote>
               <Paragraph className="max-w-4xl mx-auto mb-6">
-                I’ve written{' '}
+                我大概寫了有{' '}
                 <a
                   href="https://adamwathan.me/css-utility-classes-and-separation-of-concerns/"
                   className="text-light-blue-600 font-semibold"
@@ -146,13 +152,12 @@ export default function Home() {
                       'inset 0 -0.1666666667em 0 0 #fff, inset 0 -0.3333333333em 0 0 #bae6fd',
                   }}
                 >
-                  a few thousand words
+                  幾千字
                 </a>{' '}
                 <Widont>
-                  on why traditional “semantic class names” are the reason CSS is hard to maintain,
-                  but the truth is you’re never going to believe me until you actually try it. If
-                  you can suppress the urge to retch long enough to give it a chance, I really think
-                  you'll wonder how you ever worked with CSS any other way.
+                {
+                  '就為了說明「為什麼傳統語義類 class 名稱的 CSS 會這麼難維護」這件事，但事實上，如果你沒有親自嘗試過，你永遠不會相信我。只要你願意耐心的給它一個機會，我相信你絕對會想知道怎麼透過其他的方式使用 CSS。'
+                }
                 </Widont>
               </Paragraph>
             </blockquote>
@@ -166,7 +171,7 @@ export default function Home() {
                 />
               </div>
               <div className="text-gray-900">Adam Wathan</div>
-              <div className="text-light-blue-600">Creator of Tailwind CSS</div>
+              <div className="text-light-blue-600">Tailwind CSS 的作者</div>
             </figcaption>
           </figure>
         </div>
@@ -187,5 +192,5 @@ export default function Home() {
       </div>
       <Footer />
     </div>
-  )
+  );
 }

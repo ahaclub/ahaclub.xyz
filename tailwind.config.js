@@ -238,6 +238,11 @@ module.exports = {
             'linear-gradient(45deg, var(--stripes-color) 12.50%, transparent 12.50%, transparent 50%, var(--stripes-color) 50%, var(--stripes-color) 62.50%, transparent 62.50%, transparent 100%)',
           backgroundSize: '5.66px 5.66px',
         },
+        '.bg-stripes2': {
+          backgroundImage:
+          'linear-gradient(90deg, var(--stripes-color) 20%, transparent 20% 100%);',
+          backgroundSize: '15.66px 15.66px',
+        },
       }
 
       const addColor = (name, color) =>

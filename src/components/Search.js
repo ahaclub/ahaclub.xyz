@@ -68,7 +68,7 @@ export function Search() {
         type="button"
         ref={searchButtonRef}
         onClick={onOpen}
-        className="group leading-6 font-medium flex items-center space-x-3 sm:space-x-4 hover:text-gray-600 transition-colors duration-200 w-full py-2"
+        className="group leading-6 font-medium flex flex-grow items-center space-x-3 sm:space-x-4 hover:text-gray-600 transition-colors duration-200 py-2"
       >
         <svg
           width="24"
@@ -85,21 +85,21 @@ export function Search() {
           />
         </svg>
         <span>
-          Quick search<span className="hidden sm:inline"> for anything</span>
+          快速搜尋
         </span>
         <span
           style={{ opacity: browserDetected ? '1' : '0' }}
           className="hidden sm:block text-gray-400 text-sm leading-5 py-0.5 px-1.5 border border-gray-300 rounded-md"
         >
-          <span className="sr-only">Press </span>
+          <span className="sr-only">按下 </span>
           <kbd className="font-sans">
             <abbr title={actionKey[1]} className="no-underline">
               {actionKey[0]}
             </abbr>
           </kbd>
-          <span className="sr-only"> and </span>
+          <span className="sr-only"> 和 </span>
           <kbd className="font-sans">K</kbd>
-          <span className="sr-only"> to search</span>
+          <span className="sr-only">開始搜尋</span>
         </span>
       </button>
       {isOpen &&
