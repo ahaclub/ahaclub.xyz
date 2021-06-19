@@ -58,17 +58,6 @@ const testimonials = [
     },
   },
   {
-    content:
-      '你或许在查看 README 的时候，发现了损坏的链接，又或者拼写错误。又或者是你是一名新手，使用的过程中发现了问题，又或者是某问题应该在文档中注明。请不要坐视不理，径直绕开，或者是请求他人修复，伸出你的援助之手，解决这些你能看到的问题。而这正是开源的精髓之所在！',
-    tweetUrl: 'https://opensource.guide/zh-hans/how-to-contribute/',
-    author: {
-      name: 'Open Source Guides',
-      role: 'Open source contributor',
-      avatar: require('@/img/avatars/github.png').default,
-    },
-  },
-
-  {
     content: `近一年来，我接触了成百上千位使用 Aha 的小伙伴们，奇奇怪怪又可可爱爱，每个人对梦想的坚持都令我动容`,
     tweetUrl: 'https://mp.weixin.qq.com/s/nUch-47EFOx2ksbGHBJ2Vg',
     author: {
@@ -94,7 +83,7 @@ const testimonials = [
     author: {
       name: 'Open Source Guides',
       role: `Open source contributor`,
-      avatar: require('@/img/avatars/oprah-winfrey.jpeg').default,
+      avatar: require('@/img/avatars/github.png').default,
     },
   },
   {
@@ -117,16 +106,16 @@ const testimonials = [
       avatar: require('@/img/avatars/mark.png').default,
     },
   },
-  {
-    content:
-      '"Nearly everyone has had aha moments of sudden clarity. They can and do change our lives." "几乎每个人，都会在一生中拥有突然灵光一闪的‘aha moments’ 。这些瞬间可以，并且真的改变了我们一生。”',
-    tweetUrl: 'https://twitter.com/rauchg/status/1225611926320738304',
-    author: {
-      name: 'Oprah Gail Winfrey',
-      role: ' American talk show host',
-      avatar: require('@/img/avatars/oprah-winfrey.jpeg').default,
-    },
-  },
+  // {
+  //   content:
+  //     '"Nearly everyone has had aha moments of sudden clarity. They can and do change our lives." "几乎每个人，都会在一生中拥有突然灵光一闪的‘aha moments’ 。这些瞬间可以，并且真的改变了我们一生。”',
+  //   tweetUrl: 'https://twitter.com/rauchg/status/1225611926320738304',
+  //   author: {
+  //     name: 'Oprah Gail Winfrey',
+  //     role: ' American talk show host',
+  //     avatar: require('@/img/avatars/oprah-winfrey.jpeg').default,
+  //   },
+  // },
   {
     content: `社群拥有强大的能量。这种能量可能是正面的也可能是负面的，一切都取决于你如何驾驭它。随着社群的成长，要想办法让之成为建设性的力量，而非具有破坏性的。`,
     author: {

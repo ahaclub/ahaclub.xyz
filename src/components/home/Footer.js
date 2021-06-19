@@ -6,7 +6,7 @@ import { Logo } from '@/components/Logo'
 
 const footerNav = {
   'Getting started': {
-    showName: '相关采访（INTERVIER）',
+    showName: '相关采访（INTERVIEW）',
     className: 'row-span-2',
     // items: documentationNav['起手式 (Getting started)'],
     items: [

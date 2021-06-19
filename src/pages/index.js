@@ -82,7 +82,24 @@ export default function Home() {
           content="AhaClub - Help find your life, instead of job"
         />
 
-        <title>AhaClub 互联网俱乐部</title>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtag/js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','G-PBP96GYJ64');`,
+          }}
+        />
+
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-PBP96GYJ64"></script>
+        {/* <script>
+          window.dataLayer = window.dataLayer || [] function gtag(){' '}
+          {window.dataLayer.push(arguments)}
+          gtag('js', new Date()) gtag('config', 'G-PBP96GYJ64')
+        </script> */}
+
+        <title>AhaClub</title>
       </Head>
       <header className="relative z-10 max-w-screen-lg xl:max-w-screen-xl mx-auto">
         <div className="px-4 sm:px-6 md:px-8 mb-14 sm:mb-20 xl:mb-8">
