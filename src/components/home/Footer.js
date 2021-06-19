@@ -6,27 +6,70 @@ import { Logo } from '@/components/Logo'
 
 const footerNav = {
   'Getting started': {
-    showName: '起手式 (Getting started)',
+    showName: '相关采访（INTERVIER）',
     className: 'row-span-2',
-    items: documentationNav['起手式 (Getting started)'],
+    // items: documentationNav['起手式 (Getting started)'],
+    items: [
+      { title: '向上生长，向下扎根', href: 'https://mp.weixin.qq.com/s/5cFSMq7rcgFVYIbuhImxSg' },
+      {
+        title: '红杉学者：不设限的斜杠青年',
+        href: 'https://mp.weixin.qq.com/s/ezb8H7hWM1f2gUg6d8Njxw',
+      },
+      {
+        title: '少楠：我想改善一代人的思考方式',
+        href: 'https://mp.weixin.qq.com/s/tkgaIp7mQfMJMZuI2igVyQ',
+      },
+      {
+        title: '上岸后，想对一年前的自己说些什么',
+        href: 'https://mp.weixin.qq.com/s/dpEJ4xEnH_bwlQpEXUGDXA',
+      },
+      {
+        title: '入职后，我过着怎样的生活',
+        href: 'https://mp.weixin.qq.com/s/tkgaIp7mQfMJMZuI2igVyQ',
+      },
+      { title: '欢迎来到成年人的世界', href: 'https://mp.weixin.qq.com/s/ZHvzhAUBq_9JTT00ckcU-A' },
+    ],
   },
   'Core concepts': {
     showName: '核心概念 (Core Concepts)',
     className: 'row-span-2',
-    items: documentationNav['核心概念 (Core Concepts)'],
-  },
-  'Customization': {
-    showName: '客製化 (Customization)',
-    className: 'row-span-2',
-    items: documentationNav['客製化 (Customization)'],
-  },
-  'Community': {
-    showName: '官方社群',
+    // items: documentationNav['核心概念 (Core Concepts)'],
     items: [
-      { title: 'GitHub', href: 'https://github.com/tailwindlabs/tailwindcss' },
-      { title: 'Discord', href: '/discord' },
-      { title: 'Twitter', href: 'https://twitter.com/tailwindcss' },
-      { title: 'YouTube', href: 'https://www.youtube.com/tailwindlabs' },
+      { title: '什么是 Aha Moment', href: 'https://www.yuque.com/ahaclub/blog/name' },
+      {
+        title: '如无必要，勿增实体',
+        href: 'https://www.yuque.com/ahaclub/blog/nctu8z',
+      },
+      { title: '同 Ant-D 一致的设计价值观', href: 'https://ant.design/docs/spec/values-cn' },
+      { title: '既受天泽，当扶羸弱，拥抱开源', href: 'https://opensource.guide/zh-hans/' },
+    ],
+  },
+  Customization: {
+    showName: '帮助（HELP）',
+    className: 'row-span-2',
+    // items: documentationNav['帮助（HELP）'],
+    items: [
+      { title: '这里是 AhaClub', href: 'https://mp.weixin.qq.com/s/wF5B2OrC8jDQJOvDUFXq-A' },
+      {
+        title: '感恩2020 | 愿你有更好的2021',
+        href: 'https://mp.weixin.qq.com/s/PD5SK3PhSiVTs5lXePYg6A',
+      },
+      { title: 'Aha 一周年了', href: 'https://1.ahaclub.net' },
+      { title: '加入我们', href: 'https://mp.weixin.qq.com/s/Ehj2wVjU-nro90Ukbxhxng' },
+    ],
+  },
+  Community: {
+    showName: '社区（COMMUNUTY）',
+    items: [
+      { title: 'AhaFM-喜马拉雅', href: 'https://www.ximalaya.com/gerenchengzhang/40742254/' },
+      {
+        title: 'AhaFM-小宇宙',
+        href: 'https://www.xiaoyuzhoufm.com/podcast/5f33c9c59504bbdb779dffd5',
+      },
+      { title: 'Bilibili', href: 'https://space.bilibili.com/64662194' },
+      { title: '知乎', href: 'https://www.zhihu.com/people/ahaclub/posts' },
+      { title: '语雀', href: 'https://www.yuque.com/ahaclub' },
+      { title: 'GitHub', href: 'https://github.com/ahaclub' },
     ],
   },
 }

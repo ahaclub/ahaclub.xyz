@@ -28,7 +28,7 @@ export const documentationNav = {
     pages['adding-new-utilities'],
     pages['functions-and-directives'],
   ],
-  '客製化 (Customization)': [
+  '帮助（HELP）': [
     pages['configuration'],
     pages['just-in-time-mode'],
     pages['theme'],
@@ -39,9 +39,7 @@ export const documentationNav = {
     pages['plugins'],
     pages['presets'],
   ],
-  '基底樣式 (Base Styles)': [
-    pages['preflight']
-  ],
+  '基底樣式 (Base Styles)': [pages['preflight']],
   '排版 (Layout)': [
     pages['container'],
     pages['box-decoration-break'],
@@ -88,11 +86,7 @@ export const documentationNav = {
     pages['place-items'],
     pages['place-self'],
   ],
-  '邊距 (Spacing)': [
-    pages['padding'], 
-    pages['margin'], 
-    pages['space']
-  ],
+  '邊距 (Spacing)': [pages['padding'], pages['margin'], pages['space']],
   '尺寸大小 (Sizing)': [
     pages['width'],
     pages['min-width'],
@@ -179,10 +173,7 @@ export const documentationNav = {
     pages['backdrop-saturate'],
     pages['backdrop-sepia'],
   ],
-  '表格 (Tables)': [
-    pages['border-collapse'], 
-    pages['table-layout']
-  ],
+  '表格 (Tables)': [pages['border-collapse'], pages['table-layout']],
   '動畫 (Transitions and Animation)': [
     pages['transition-property'],
     pages['transition-duration'],
@@ -206,14 +197,8 @@ export const documentationNav = {
     pages['resize'],
     pages['user-select'],
   ],
-  '向量圖 (SVG)': [
-    pages['fill'], 
-    pages['stroke'], 
-    pages['stroke-width']
-  ],
-  '平易近人 (Accessibility)': [
-    pages['screen-readers']
-  ],
+  '向量圖 (SVG)': [pages['fill'], pages['stroke'], pages['stroke-width']],
+  '平易近人 (Accessibility)': [pages['screen-readers']],
   '官方插件 (Official Plugins)': [
     {
       title: 'Typography',

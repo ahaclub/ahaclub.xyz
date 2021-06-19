@@ -56,7 +56,7 @@ export default function App({ Component, pageProps, router }) {
     : {}
   const meta = Component.layoutProps?.meta || {}
   const description =
-    meta.metaDescription || meta.description || 'Documentation for the Tailwind CSS framework.'
+    meta.metaDescription || meta.description || 'AhaClub - Help find your life, instead of job'
 
   if (router.pathname.startsWith('/examples/')) {
     return <Component {...pageProps} />

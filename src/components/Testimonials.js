@@ -18,146 +18,121 @@ const rotation = [-2, 1, -1, 2, -1, 1]
 
 const testimonials = [
   {
-    content: 'I feel like an idiot for not using Tailwind CSS until now.',
-    tweetUrl: 'https://twitter.com/ryanflorence/status/1187951799442886656',
-    author: {
-      name: 'Ryan Florence',
-      role: 'Remix & React Training',
-      avatar: require('@/img/avatars/ryan-florence.jpg').default,
-    },
-  },
-  {
-    content:
-      'If I had to recommend a way of getting into programming today, it would be HTML + CSS with Tailwind CSS.',
-    tweetUrl: 'https://twitter.com/rauchg/status/1225611926320738304',
-    author: {
-      name: 'Guillermo Rauch',
-      role: 'Vercel',
-      avatar: require('@/img/avatars/guillermo-rauch.jpg').default,
-    },
-  },
-  {
-    content: `I have no design skills and with Tailwind I can actually make good looking websites with ease and it's everything I ever wanted in a CSS framework.`,
-    author: {
-      name: 'Sara Vieira',
-      role: 'CodeSandbox',
-      avatar: require('@/img/avatars/sara-vieira.jpg').default,
-    },
-  },
-  {
-    content:
-      "I used Tailwind to redesign feltpresence.com the other day. It's fantastic! I only gave myself a few hours to hack it together and it made a huge difference.",
-    author: {
-      name: 'Ryan Singer',
-      role: 'Basecamp',
-      avatar: require('@/img/avatars/ryan-singer.jpg').default,
-    },
-  },
-  {
-    content: `I started using @tailwindcss. I instantly fell in love with their responsive modifiers, thorough documentation, and how easy it was customizing color palettes.`,
+    content: `我在想，AhaClub 究竟是什么？是一个品牌？是核心团队的号召力？亦或是一个有价值的工具？我会觉得，AhaClub 是大家对于一种价值高度认同而凝聚起来的精神。`,
     tweetUrl: 'https://twitter.com/dacey_nolan/status/1303744545587441666',
     author: {
-      name: 'Dacey Nolan',
-      role: 'Software Engineer',
-      avatar: require('@/img/avatars/dacey-nolan.jpg').default,
+      name: 'Jacky',
+      role: 'PM',
+      avatar: require('@/img/avatars/jacky.png').default,
     },
   },
 
   {
-    content: 'Loved it the very moment I used it.',
-    tweetUrl: 'Gilbert Rabut Tsurwa',
+    content: '因为感恩，所以为爱发电。',
+    tweetUrl: 'https://mp.weixin.qq.com/s/PD5SK3PhSiVTs5lXePYg6A',
     author: {
-      name: 'Gilbert Rabut Tsurwa',
-      role: 'Web Developer',
-      avatar: require('@/img/avatars/gilbert-rabut-tsurwa.jpg').default,
+      name: '闲人宇',
+      role: 'PM',
+      avatar: require('@/img/avatars/xianren.png').default,
     },
   },
 
   {
     content:
-      'I came into my job wondering why the last dev would ever implement Tailwind into our projects, within days I was a Tailwind convert and use it for all of my personal projects.',
+      '很幸运在我的二十岁遇见你，从第一场活动走到现在，带给我太多改变和感动，愿你茁壮成长，永远保持初心，Ahaer 们永远年轻，永远热泪盈眶',
     tweetUrl: 'https://twitter.com/maddiexcampbell/status/1303752658029740032',
     author: {
-      name: 'Madeline Campbell',
-      role: 'Full-Stack Developer',
-      avatar: require('@/img/avatars/madeline-campbell.jpg').default,
-    },
-  },
-
-  {
-    content:
-      'There’s one thing that sucks about @tailwindcss - once you’ve used it on a handful of projects it is a real pain in the ass to write normal CSS again.',
-    tweetUrl: 'https://twitter.com/iamgraem_e/status/1322861404781748228?s=21',
-    author: {
-      name: 'Graeme Houston',
-      role: 'JavaScript Developer',
-      avatar: require('@/img/avatars/graeme-houston.jpg').default,
-    },
-  },
-
-  {
-    content: `Okay, I’m officially *all* in on the @tailwindcss hype train. Never thought building websites could be so ridiculously fast and flexible.`,
-    tweetUrl: 'https://twitter.com/lukeredpath/status/1316543571684663298?s=21',
-    author: {
-      name: 'Aaron Bushnell',
-      role: 'Programmer @ TrendyMinds',
-      avatar: require('@/img/avatars/aaron-bushnell.jpg').default,
+      name: 'Priscilla',
+      role: 'PM/OM/HR',
+      avatar: require('@/img/avatars/priscilla.png').default,
     },
   },
   {
     content:
-      'Have been working with CSS for over ten years and Tailwind just makes my life easier. It is still CSS and you use flex, grid, etc. but just quicker to write and maintain.',
+      '“慢就是快”，当你放平心态的全情投入，并在自己舒适区的边缘慢慢尝试向外探索，你的坚持和积累就会有收获。',
+    tweetUrl: 'https://mp.weixin.qq.com/s/f7sKqbv3p6BIREhAgDS0-g',
+    author: {
+      name: '米奇学姐',
+      role: '金融从业者',
+      avatar: require('@/img/avatars/miqi.jpg').default,
+    },
+  },
+  {
+    content:
+      '你或许在查看 README 的时候，发现了损坏的链接，又或者拼写错误。又或者是你是一名新手，使用的过程中发现了问题，又或者是某问题应该在文档中注明。请不要坐视不理，径直绕开，或者是请求他人修复，伸出你的援助之手，解决这些你能看到的问题。而这正是开源的精髓之所在！',
+    tweetUrl: 'https://opensource.guide/zh-hans/how-to-contribute/',
+    author: {
+      name: 'Open Source Guides',
+      role: 'Open source contributor',
+      avatar: require('@/img/avatars/github.png').default,
+    },
+  },
+
+  {
+    content: `近一年来，我接触了成百上千位使用 Aha 的小伙伴们，奇奇怪怪又可可爱爱，每个人对梦想的坚持都令我动容`,
+    tweetUrl: 'https://mp.weixin.qq.com/s/nUch-47EFOx2ksbGHBJ2Vg',
+    author: {
+      name: '核桃',
+      role: 'OM/Student',
+      avatar: require('@/img/avatars/hetao.png').default,
+    },
+  },
+  {
+    content:
+      'AhaClub 在很大程度上解决了我在求学过程中存在巨大信息差的问题，事实上许多事情都有不成文的规定，这导致我们很难在书本和已有的互联网上搜寻到答案，而 AhaClub 提供了新的选择',
     tweetUrl: 'https://twitter.com/debs_obrien/status/1243255468241420288',
     author: {
-      name: `Debbie O'Brien`,
-      role: 'Head of Learning @ Nuxt.js',
-      avatar: require('@/img/avatars/debbie-obrien.jpg').default,
-    },
-  },
-  {
-    content: 'Okay, @tailwindcss just clicked for me and now I feel like a #!@%&$% idiot.',
-    tweetUrl: 'https://twitter.com/ken_wheeler/status/1225373231139475458',
-    author: {
-      name: 'Ken Wheeler',
-      role: `React Engineer`,
-      avatar: require('@/img/avatars/ken-wheeler.jpg').default,
-    },
-  },
-  {
-    content: `I've been using @tailwindcss the past few months and it's amazing. I already used some utility classes before, but going utility-first... this is the way.`,
-    tweetUrl: 'https://twitter.com/JadLimcaco/status/1327417021915561984',
-    author: {
-      name: 'Jad Limcaco',
-      role: 'Designer',
-      avatar: require('@/img/avatars/jad-limcaco.jpg').default,
-    },
-  },
-  {
-    content: `After finally getting to use @tailwindcss on a real client project in the last two weeks I never want to write CSS by hand again. I was a skeptic, but the hype is real.`,
-    tweetUrl: 'https://twitter.com/lukeredpath/status/1316543571684663298?s=21',
-    author: {
-      name: 'Luke Redpath',
-      role: 'Ruby & iOS Developer',
-      avatar: require('@/img/avatars/luke-redpath.jpg').default,
+      name: `Nimin`,
+      role: 'RD',
+      avatar: require('@/img/avatars/github.png').default,
     },
   },
   {
     content:
-      "I didn't think I was going to like @tailwindcss... spent a day using it for a POC, love it! I wish this had been around when we started our company design system, seriously considering a complete rebuild",
-    tweetUrl: 'https://twitter.com/JonBloomer/status/1300923818622377984',
+      '开源并不是高级俱乐部；它就是由你这样的人所浇铸和打造。“开源”只是针对这个世界的需要修复的问题的一个梦幻术语罢了。',
+    tweetUrl: 'https://twitter.com/ken_wheeler/status/1225373231139475458',
     author: {
-      name: 'Jon Bloomer',
-      role: 'Front-End Developer',
-      avatar: require('@/img/avatars/jon-bloomer.jpg').default,
+      name: 'Open Source Guides',
+      role: `Open source contributor`,
+      avatar: require('@/img/avatars/oprah-winfrey.jpeg').default,
     },
   },
   {
-    content: '@tailwindcss looked unpleasant at first, but now I’m hooked on it.',
-    tweetUrl: 'https://twitter.com/droidgilliland/status/1222733372855848961',
+    content: `不要陷入争论。在你们处理完手头上的事情之前，不要侧重于处理别人的行为。专注于你们需要什么。`,
+    tweetUrl:
+      'https://the-orbit.net/almostdiamonds/2014/04/10/so-youve-got-yourself-a-policy-now-what/',
     author: {
-      name: 'Andrew Gilliland',
-      role: 'Front-End Developer',
-      avatar: require('@/img/avatars/andrew-gilliland.jpg').default,
+      name: 'Stephanie Zvan',
+      role: 'The Orbit blogger',
+      avatar: require('@/img/avatars/the-orbit.png').default,
+    },
+  },
+  {
+    content:
+      'Aha 的初心始终是“消除信息差”，也是本播客的核心主旨。消除信息差的目的不是让大家都去冲 BAT，而是希望大学生群体，在近 20 年的被动选择后，能够在前辈优质信息分享的基础上，去做一次主动选择，无论是求职、留学、亦或考研保研乃至创业——套用我写在播客开头语的一句话：“希望前辈的经历与感悟，点亮属于你的 Aha Moment”',
+    tweetUrl: 'https://mp.weixin.qq.com/s/PD5SK3PhSiVTs5lXePYg6A',
+    author: {
+      name: 'Mark',
+      role: 'Market/Podcast',
+      avatar: require('@/img/avatars/mark.png').default,
+    },
+  },
+  {
+    content:
+      '"Nearly everyone has had aha moments of sudden clarity. They can and do change our lives." "几乎每个人，都会在一生中拥有突然灵光一闪的‘aha moments’ 。这些瞬间可以，并且真的改变了我们一生。”',
+    tweetUrl: 'https://twitter.com/rauchg/status/1225611926320738304',
+    author: {
+      name: 'Oprah Gail Winfrey',
+      role: ' American talk show host',
+      avatar: require('@/img/avatars/oprah-winfrey.jpeg').default,
+    },
+  },
+  {
+    content: `社群拥有强大的能量。这种能量可能是正面的也可能是负面的，一切都取决于你如何驾驭它。随着社群的成长，要想办法让之成为建设性的力量，而非具有破坏性的。`,
+    author: {
+      name: 'Open Source Guides',
+      role: 'Open source contributor',
+      avatar: require('@/img/avatars/github.png').default,
     },
   },
 ]

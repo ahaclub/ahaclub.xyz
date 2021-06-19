@@ -26,7 +26,7 @@ function NpmInstallButton() {
     let current = true
     if (state === 'copying') {
       navigator.clipboard
-        .writeText('npm install tailwindcss')
+        .writeText('AhaClub 经验星球')
         .then(() => {
           if (current) {
             setState('copied')
@@ -57,7 +57,7 @@ function NpmInstallButton() {
         <span className="hidden sm:inline text-gray-500" aria-hidden="true">
           ${' '}
         </span>
-        npm install tailwindcss
+        微信小程序搜索“AhaClub 经验星球”
       </span>
       <span className="sr-only">(click to copy to clipboard)</span>
       <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth={1.5}>
@@ -74,7 +74,7 @@ export default function Home() {
         <meta
           key="twitter:title"
           name="twitter:title"
-          content="AhaClub - Help find your life, instead of job"
+          content="一生很长，但是只有找到了自己的光， 才能不虚此行。"
         />
         <meta
           key="og:title"
@@ -82,7 +82,7 @@ export default function Home() {
           content="AhaClub - Help find your life, instead of job"
         />
 
-        <title>AhaClub - Help find your life, instead of job</title>
+        <title>AhaClub 互联网俱乐部</title>
       </Head>
       <header className="relative z-10 max-w-screen-lg xl:max-w-screen-xl mx-auto">
         <div className="px-4 sm:px-6 md:px-8 mb-14 sm:mb-20 xl:mb-8">
@@ -90,23 +90,24 @@ export default function Home() {
             {/* <Search /> */}
             <Logo className="w-auto h-7 sm:h-8" />
             <div className="flex items-center space-x-6 sm:space-x-10 ml-6 sm:ml-10 whitespace-nowrap">
-              <NextLink href="/docs">
+              <NextLink href="https://www.yuque.com/ahaclub/blog">
                 <a className="text-base leading-6 font-medium hover:text-gray-600 transition-colors duration-200 py-2">
                   <span className="sm:hidden">团队博客</span>
                   <span className="hidden sm:inline">团队博客</span>
                 </a>
               </NextLink>
-              <NextLink href="https://tailwindcss.com/">
+              {/* 英文版本没有写 */}
+              {/* <NextLink href="https://tailwindcss.com/">
                 <a className="text-base leading-6 font-medium hover:text-gray-600 transition-colors duration-200 py-2">
                   <span className="sm:hidden">EN</span>
                   <span className="hidden sm:inline">EN</span>
                 </a>
-              </NextLink>
+              </NextLink> */}
               <a
-                href="https://github.com/tailwindlabs/tailwindcss"
+                href="https://github.com/ahaclub"
                 className="text-gray-400 hover:text-gray-500 transition-colors duration-200"
               >
-                <span className="sr-only">Tailwind CSS on GitHub</span>
+                <span className="sr-only">AhaClub on GitHub</span>
                 <svg width="24" height="24" viewBox="0 0 16 16" fill="currentColor">
                   <path
                     fillRule="evenodd"
@@ -125,25 +126,26 @@ export default function Home() {
           <div className="p-3"> 💓，不如</div>
 
           <div className="flex flex-wrap space-y-4 sm:space-y-0 sm:space-x-4 text-center">
-            <NextLink href="/docs">
-              <a className="w-full sm:w-auto flex-none bg-gray-900 hover:bg-gray-700 text-white text-lg leading-6 font-semibold py-3 px-6 border border-transparent rounded-xl focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-gray-900 focus:outline-none transition-colors duration-200">
-                马上行动
-              </a>
-            </NextLink>
+            {/* <NextLink href="/docs"> */}
+            <a className="w-full sm:w-auto flex-none bg-gray-900 hover:bg-gray-700 text-white text-lg leading-6 font-semibold py-3 px-6 border border-transparent rounded-xl focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-gray-900 focus:outline-none transition-colors duration-200">
+              马上行动
+            </a>
+            {/* </NextLink> */}
             <NpmInstallButton />
           </div>
         </div>
-        <Hero />
+        {/* <Hero /> */}
       </header>
       <section className="relative z-10 text-center max-w-screen-lg xl:max-w-screen-xl mx-auto">
         <div className="px-4 sm:px-6 md:px-8">
           <BigText as="h2" className="mb-8">
-            <Widont>事实上，「简单聊聊」是沒用的。</Widont>
+            <Widont>抓住「灵光一闪」</Widont>
           </BigText>
           <figure>
             <blockquote>
               <Paragraph className="max-w-4xl mx-auto mb-6">
-                我大概寫了有{' '}
+                "Nearly everyone has had aha moments of sudden clarity. They can and do change our
+                lives." "几乎每个人，都会在一生中拥有突然灵光一闪的
                 <a
                   href="https://adamwathan.me/css-utility-classes-and-separation-of-concerns/"
                   className="text-light-blue-600 font-semibold"
@@ -152,33 +154,29 @@ export default function Home() {
                       'inset 0 -0.1666666667em 0 0 #fff, inset 0 -0.3333333333em 0 0 #bae6fd',
                   }}
                 >
-                  幾千字
+                  ‘aha moments’
                 </a>{' '}
-                <Widont>
-                  {
-                    '就為了說明「為什麼傳統語義類 class 名稱的 CSS 會這麼難維護」這件事，但事實上，如果你沒有親自嘗試過，你永遠不會相信我。只要你願意耐心的給它一個機會，我相信你絕對會想知道怎麼透過其他的方式使用 CSS。'
-                  }
-                </Widont>
+                <Widont>{'。这些瞬间可以，并且真的改变了我们一生。”'}</Widont>
               </Paragraph>
             </blockquote>
             <figcaption className="sm:text-xl font-medium flex flex-col items-center">
               <div className="p-1 border-2 border-light-blue-400 rounded-full mb-3">
                 <img
-                  src={require('@/img/adam.jpg').default}
+                  src={require('@/img/adam.png').default}
                   alt=""
                   className="w-10 h-10 rounded-full bg-light-blue-100"
                   loading="lazy"
                 />
               </div>
-              <div className="text-gray-900">Adam Wathan</div>
-              <div className="text-light-blue-600">Tailwind CSS 的作者</div>
+              <div className="text-gray-900">《The Eureka Factor》</div>
+              <div className="text-light-blue-600">《增长黑客》</div>
             </figcaption>
           </figure>
         </div>
       </section>
       <Testimonials />
       <div className="max-w-screen-lg xl:max-w-screen-xl mx-auto space-y-20 sm:space-y-32 md:space-y-40 lg:space-y-44">
-        <ConstraintBased />
+        {/* <ConstraintBased />
         <BuildAnything />
         <Performance />
         <MobileFirst />
@@ -187,8 +185,8 @@ export default function Home() {
         <DarkMode />
         <Customization />
         <ModernFeatures />
-        <EditorTools />
-        <ReadyMadeComponents />
+        <EditorTools /> */}
+        {/* <ReadyMadeComponents /> */}
       </div>
       <Footer />
     </div>

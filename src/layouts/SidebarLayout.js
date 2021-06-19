@@ -21,7 +21,7 @@ const NavItem = forwardRef(({ href, children, isActive, isPublished, fallbackHre
         >
           <span
             className={clsx('rounded-md absolute inset-0 bg-cyan-50', {
-              'opacity-0': !isActive
+              'opacity-0': !isActive,
             })}
           />
           <span className="relative">{children}</span>
@@ -151,7 +151,7 @@ function TopLevelNav() {
   return (
     <>
       <TopLevelLink
-        href="/docs"
+        href="https://www.yuque.com/ahaclub/blog"
         isActive={current === '' || current === 'docs'}
         color="pink"
         className="mb-4"
