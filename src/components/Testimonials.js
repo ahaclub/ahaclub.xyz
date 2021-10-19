@@ -78,7 +78,7 @@ const testimonials = [
   },
   {
     content:
-      '开源并不是高级俱乐部；它就是由你这样的人所浇铸和打造。“开源”只是针对这个世界的需要修复的问题的一个梦幻术语罢了。',
+      '开源并不是高级俱乐部；它就是由你这样的人所浇铸和打造。“开源” 只是针对这个世界的需要修复的问题的一个梦幻术语罢了。',
     tweetUrl: 'https://twitter.com/ken_wheeler/status/1225373231139475458',
     author: {
       name: 'Open Source Guides',
