@@ -1,17 +1,17 @@
 import { Testimonials } from '@/components/Testimonials'
-import { DarkMode } from '@/components/home/DarkMode'
-import { ConstraintBased } from '@/components/home/ConstraintBased'
-import { BuildAnything } from '@/components/home/BuildAnything'
-import { Performance } from '@/components/home/Performance'
-import { MobileFirst } from '@/components/home/MobileFirst'
-import { StateVariants } from '@/components/home/StateVariants'
-import { ComponentDriven } from '@/components/home/ComponentDriven'
-import { Customization } from '@/components/home/Customization'
-import { ModernFeatures } from '@/components/home/ModernFeatures'
-import { EditorTools } from '@/components/home/EditorTools'
-import { ReadyMadeComponents } from '@/components/home/ReadyMadeComponents'
+// import { DarkMode } from '@/components/home/DarkMode'
+// import { ConstraintBased } from '@/components/home/ConstraintBased'
+// import { BuildAnything } from '@/components/home/BuildAnything'
+// import { Performance } from '@/components/home/Performance'
+// import { MobileFirst } from '@/components/home/MobileFirst'
+// import { StateVariants } from '@/components/home/StateVariants'
+// import { ComponentDriven } from '@/components/home/ComponentDriven'
+// import { Customization } from '@/components/home/Customization'
+// import { ModernFeatures } from '@/components/home/ModernFeatures'
+// import { EditorTools } from '@/components/home/EditorTools'
+// import { ReadyMadeComponents } from '@/components/home/ReadyMadeComponents'
 // import { Search } from '@/components/Search';
-import { Hero } from '@/components/home/Hero'
+// import { Hero } from '@/components/home/Hero'
 import { BigText, InlineCode, Link, Paragraph, Widont } from '@/components/home/common'
 import { useEffect, useState } from 'react'
 import { Logo } from '@/components/Logo'
@@ -140,14 +140,15 @@ export default function Home() {
           <p className="max-w-screen-lg text-lg sm:text-2xl sm:leading-10 font-medium mb-10 sm:mb-11">
             一生很长，但是只有找到了自己的 <InlineCode>光</InlineCode>， 才能不虚此行。
           </p>
-          <div className="p-3"> 💓，不如</div>
+          <div className="p-3"><span aria-label='❤️' role="img"> 💓</span>，不如</div>
 
           <div className="flex flex-wrap space-y-4 sm:space-y-0 sm:space-x-4 text-center">
-            {/* <NextLink href="/docs"> */}
+            <NextLink href="https://api.myminapp.com/hserve/v2/us/2ef605d5659f4a07a16178e0c7927a17/">
             <a className="w-full sm:w-auto flex-none bg-gray-900 hover:bg-gray-700 text-white text-lg leading-6 font-semibold py-3 px-6 border border-transparent rounded-xl focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-gray-900 focus:outline-none transition-colors duration-200">
-              马上行动
+              <span className="sm:hidden">马上行动！</span>
+              <span className="hidden sm:inline">马上行动！</span>
             </a>
-            {/* </NextLink> */}
+            </NextLink>
             <NpmInstallButton />
           </div>
         </div>

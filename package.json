@@ -58,7 +58,9 @@
     "stringify-object": "^3.3.0",
     "tailwindcss": "^2.1.0",
     "tinytime": "^0.2.6",
-    "unist-util-visit": "^2.0.3"
+    "unist-util-visit": "^2.0.3",
+    "minipass": "3.1.1",
+    "sharp": "^0.29.3"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "2.x",
