@@ -1,0 +1,32 @@
+# This is a basic workflow to help you get started with Actions
+
+name: upload to cos
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the master branch
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Install coscmd
+        run: sudo pip install coscmd
+      - name: build
+        run: yarn install && yarn export
+      - name: Configure coscmd
+        env:
+          SECRET_ID: ${{ secrets.SecretId }}
+          SECRET_KEY: ${{ secrets.SecretKey }}
+          BUCKET: ahaclub-1254418324
+          REGION: ap-nanjing
+        run: coscmd config -a $SECRET_ID -s $SECRET_KEY -b $BUCKET -r $REGION
+      - name: Upload
+        run: coscmd upload -rs --delete -f ./out/ / --ignore "./.git/*"
