@@ -100,9 +100,17 @@ export function Footer() {
             </li>
           ))}
         </ul>
-        <div className="pt-10 sm:pt-12">
-          <Logo width="208" height="26" />
+        <div className="sm:pt-12 flex">
+          <div className="pr-2 flex">
+            <Logo height="26" />
+          </div>
+          <Link href="https://beian.miit.gov.cn/">
+            <a className="hover:text-gray-900 transition-colors duration-200">
+              © 2020-2022 ahaclub.net 解释权所有 沪 ICP 备2020029688号-1
+            </a>
+          </Link>
         </div>
+
       </div>
     </footer>
   )
