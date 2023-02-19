@@ -106,7 +106,7 @@ export function Footer() {
           </div>
           <Link href="https://beian.miit.gov.cn/">
             <a className="hover:text-gray-900 transition-colors duration-200 text-sm">
-              © 2020-2022 AhaClub.net 沪ICP备2020029688号-1
+              © 2020-2023 AhaClub.net 沪ICP备2020029688号-1
             </a>
           </Link>
         </div>
