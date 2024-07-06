@@ -1,32 +1,49 @@
-# This is a basic workflow to help you get started with Actions
+name: Test Deployment
 
-name: upload to cos
+env:
+  VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+  VERCEL_PROJECT_ID: ${{ secrets.TEST_VERCEL_PROJECT_ID }}
+  DOMAIN_URL: ${{ secrets.TEST_DOMAIN_URL }}
 
-# Controls when the workflow will run
 on:
-  # Triggers the workflow on push or pull request events but only for the master branch
   push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
+    branches: [master]
 
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
 jobs:
   build:
     runs-on: ubuntu-latest
+
+    timeout-minutes: 30 # 设置作业的超时时间为 30 分钟，可根据需要自行调整
+
     steps:
-      - uses: actions/checkout@v1
-      - name: Install coscmd
-        run: sudo pip install coscmd
-      - name: build
-        run: yarn install && yarn export
-      - name: Configure coscmd
-        env:
-          SECRET_ID: ${{ secrets.SecretId }}
-          SECRET_KEY: ${{ secrets.SecretKey }}
-          BUCKET: ahaclub-1254418324
-          REGION: ap-nanjing
-        run: coscmd config -a $SECRET_ID -s $SECRET_KEY -b $BUCKET -r $REGION
-      - name: Upload
-        run: coscmd upload -rs --delete -f ./out/ / --ignore "./.git/*"
+      - uses: actions/checkout@v2
+      - name: Install Vercel CLI
+        run: npm install --global vercel@canary
+      - uses: pnpm/action-setup@v4
+        with:
+          version: latest
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: "pnpm"
+      - name: Pull Vercel Environment Information
+        run: vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
+      - name: Build Project Artifacts
+        run: vercel build --prod --local-config ./vercel.json --token=${{ secrets.VERCEL_TOKEN }}
+      - name: Deploy Project Artifacts to Vercel
+        run: vercel deploy  --prod  --token=${{ secrets.VERCEL_TOKEN }} #  --archive=tgz 打包为单个文件  --prebuilt 使用预编译好的产物
+
+      - name: Handle special characters in commit message
+        run: |
+          echo "SAFE_COMMIT_MESSAGE=$(git log -1 --pretty=%B | sed ':a;N;$!ba;s/\n/\\n/g' | sed 's/"/\\"/g' | sed "s/'/\\'/g")" >> $GITHUB_ENV
+      - name: Send webhook on success
+        if: success()
+        run: |
+          PAYLOAD=$(echo -n '{"msg_type": "post", "content": {"post": {"zh_cn": {"title": "项目更新通知", "content": [[{"tag": "text", "text": "测试环境更新: '"$SAFE_COMMIT_MESSAGE"'"}, {"tag": "a", "text": "部署成功", "href": "'$DOMAIN_URL'" }]]}}}}')
+          printf "$PAYLOAD"
+          curl -X POST -H "Content-Type: application/json" -d "$PAYLOAD" ${{ secrets.FEISHUNOTICE_URL }}
+      - name: Send FEISHUNOTICE on failure
+        if: failure()
+        run: |
+          REPO_URL="https://github.com/${{ github.repository_owner }}/${{ github.event.repository.name }}/actions"
+          curl -X POST -H "Content-Type: application/json" -d '{ "msg_type": "post", "content": { "post": { "zh_cn": { "title": "项目更新通知", "content": [ [{ "tag": "text", "text": "测试环境打包失败: " }, { "tag": "a", "text": "请查阅 GitHub workflow", "href": "'"${REPO_URL}"'" } ] ] } } } }' ${{ secrets.FEISHUNOTICE_URL }}
