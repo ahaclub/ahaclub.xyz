@@ -4,7 +4,7 @@
     "dev": "NODE_OPTIONS=--openssl-legacy-provider next dev",
     "build": "NODE_OPTIONS=--openssl-legacy-provider next build",
     "start": "next start",
-    "export": "next build && next export",
+    "export": "NODE_OPTIONS=--openssl-legacy-provider next build && next export",
     "format": "prettier '{src,remark,scripts}/**/*.{css,js,mdx}' --write"
   },
   "browserslist": [
@@ -55,7 +55,7 @@
     "react-intersection-observer": "^8.29.0",
     "redent": "^3.0.0",
     "seedrandom": "^3.0.5",
-    "sharp": "^0.29.3",
+    "sharp": "0.33.1",
     "simple-functional-loader": "^1.2.1",
     "stringify-object": "^3.3.0",
     "tailwindcss": "^2.1.0",
