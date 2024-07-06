@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import { documentationNav } from '@/navs/documentation'
 import clsx from 'clsx'
 import styles from './Footer.module.css'
 import { Logo } from '@/components/Logo'
@@ -8,7 +7,6 @@ const footerNav = {
   'Getting started': {
     showName: '相关采访（INTERVIEW）',
     className: 'row-span-2',
-    // items: documentationNav['起手式 (Getting started)'],
     items: [
       { title: '向上生长，向下扎根', href: 'https://mp.weixin.qq.com/s/5cFSMq7rcgFVYIbuhImxSg' },
       {
@@ -33,7 +31,6 @@ const footerNav = {
   'Core concepts': {
     showName: '核心概念 (Core Concepts)',
     className: 'row-span-2',
-    // items: documentationNav['核心概念 (Core Concepts)'],
     items: [
       { title: '什么是 Aha Moment', href: 'https://www.yuque.com/ahaclub/blog/name' },
       {
@@ -47,7 +44,6 @@ const footerNav = {
   Customization: {
     showName: '帮助（HELP）',
     className: 'row-span-2',
-    // items: documentationNav['帮助（HELP）'],
     items: [
       { title: '这里是 AhaClub', href: 'https://mp.weixin.qq.com/s/wF5B2OrC8jDQJOvDUFXq-A' },
       {

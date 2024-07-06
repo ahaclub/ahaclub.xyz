@@ -1,9 +1,7 @@
-import { SidebarLayout } from '@/layouts/SidebarLayout'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 import twitterSquare from '@/img/twitter-square.jpg'
 import { Title } from '@/components/Title'
-import { documentationNav } from '@/navs/documentation'
 
 export function DocumentationLayout(props) {
   const router = useRouter()
@@ -21,7 +19,6 @@ export function DocumentationLayout(props) {
           content={`https://tailwindcss.com${twitterSquare}`}
         />
       </Head>
-      <SidebarLayout nav={documentationNav} {...props} />
     </>
   )
 }
