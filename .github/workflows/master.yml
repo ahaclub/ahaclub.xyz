@@ -2,8 +2,10 @@ name: Test Deployment
 
 env:
   VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
-  VERCEL_PROJECT_ID: ${{ secrets.TEST_VERCEL_PROJECT_ID }}
-  DOMAIN_URL: ${{ secrets.TEST_DOMAIN_URL }}
+  VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+  VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+  FEISHUNOTICE_URL: ${{ secrets.FEISHUNOTICE_URL }}
+  DOMAIN_URL: 'https://ahaclub.xyz'
 
 on:
   push:
@@ -27,11 +29,11 @@ jobs:
           node-version: 18
           cache: "pnpm"
       - name: Pull Vercel Environment Information
-        run: vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
+        run: vercel pull --yes --environment=production --token=$VERCEL_TOKEN
       - name: Build Project Artifacts
-        run: vercel build --prod --local-config ./vercel.json --token=${{ secrets.VERCEL_TOKEN }}
+        run: vercel build --prod --local-config ./vercel.json --token=$VERCEL_TOKEN
       - name: Deploy Project Artifacts to Vercel
-        run: vercel deploy  --prod  --token=${{ secrets.VERCEL_TOKEN }} #  --archive=tgz 打包为单个文件  --prebuilt 使用预编译好的产物
+        run: vercel deploy  --prod  --token=$VERCEL_TOKEN #  --archive=tgz 打包为单个文件  --prebuilt 使用预编译好的产物
 
       - name: Handle special characters in commit message
         run: |
@@ -41,7 +43,7 @@ jobs:
         run: |
           PAYLOAD=$(echo -n '{"msg_type": "post", "content": {"post": {"zh_cn": {"title": "项目更新通知", "content": [[{"tag": "text", "text": "测试环境更新: '"$SAFE_COMMIT_MESSAGE"'"}, {"tag": "a", "text": "部署成功", "href": "'$DOMAIN_URL'" }]]}}}}')
           printf "$PAYLOAD"
-          curl -X POST -H "Content-Type: application/json" -d "$PAYLOAD" ${{ secrets.FEISHUNOTICE_URL }}
+          curl -X POST -H "Content-Type: application/json" -d "$PAYLOAD" $FEISHUNOTICE_URL
       - name: Send FEISHUNOTICE on failure
         if: failure()
         run: |
